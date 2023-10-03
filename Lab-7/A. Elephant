@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int x;
+    cin >> x;
+    int step = 0;
+    step = x + 4;
+    int step1 = step / 5;
+    cout << step1 << endl;
+
+    return 0;
+}
