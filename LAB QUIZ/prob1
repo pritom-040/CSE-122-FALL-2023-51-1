@@ -1,0 +1,75 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Array
+{
+public:
+    int a[100];
+    char b[100];
+    float c[100];
+    int cnt1 = 0;
+    int cnt2 = 0;
+    int cnt3 = 0;
+
+    void insert1(int value)
+    {
+        if (cnt1 < 100) {
+            a[cnt1] = value;
+            cnt1++;
+        }
+    }
+
+    void insert1(char value)
+    {
+        if (cnt2 < 100) {
+            b[cnt2] = value;
+            cnt2++;
+        }
+    }
+
+    void insert1(float value)
+    {
+        if (cnt3 < 100) {
+            c[cnt3] = value;
+            cnt3++;
+        }
+    }
+
+    void output()
+    {
+        for (int i = 0; i < cnt1; i++) {
+            cout << a[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void output1()
+    {
+        for (int i = 0; i < cnt2; i++) {
+            cout << b[i] << " ";
+        }
+        cout << endl;
+    }
+
+    void output2()
+    {
+        for (int i = 0; i < cnt3; i++) {
+            cout << c[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main()
+{
+    Array obj;
+    obj.insert1(10);
+    obj.insert1('p');
+    obj.insert1(4.56f);
+
+    obj.output();
+    obj.output1();
+    obj.output2();
+
+
+}
