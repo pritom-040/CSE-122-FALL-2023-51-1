@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+using namespace std;
+
+class show {
+public:
+    int a,b,c;
+
+    virtual void in() {
+        cin>>a>>b>>c;
+    }
+
+    virtual void out() {
+        cout<<max(a,max(b,c))<<endl;
+    }
+};
+
+class floatvis : public show {
+public:
+    float d,e,f;
+
+    void in()override {
+        show::in();
+        cin >>d>>e>>f;
+    }
+
+    void out() override {
+        show::out();
+        float maxF = max(d,max(e,f));
+        cout <<maxF<<endl;
+    }
+};
+
+class charvis : public floatvis {
+public:
+    char x,y,z;
+
+    void in() override {
+        floatvis::in();
+        cin >>x>>y>>z;
+    }
+
+    void out() override {
+        floatvis::out();
+        char maxC= max(max(x,y),z);
+        cout<<maxC<<endl;
+    }
+};
+
+int main() {
+    charvis obj;
+    obj.in();
+    obj.out();
+
+}
