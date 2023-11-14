@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class manchesterunited
+{
+private:
+    int coach;
+    int player;
+
+public:
+    manchesterunited()
+    {
+        coach= 0;
+        player= 0;
+    }
+
+    manchesterunited(int a, int b)
+    {
+        coach= a;
+        player= b;
+    }
+
+    void getdata()
+    {
+        cout<<"Coach"<<" "<<coach<<" "<<"Player"<<" "<<player<< endl;
+    }
+
+    manchesterunited operator++()
+    {
+        coach++;
+        player++;
+
+    }
+
+    manchesterunited operator-( manchesterunited&ano)
+    {
+        return manchesterunited(coach-ano.coach,player-ano.player);
+    }
+};
+
+int main()
+{
+    manchesterunited ronaldo(4, 5);
+    ++ronaldo;
+    ronaldo.getdata();
+
+    manchesterunited fernendes(5, 6);
+    ++fernendes;
+    fernendes.getdata();
+
+    manchesterunited res =fernendes-ronaldo;
+    res.getdata();
+
+
+}
